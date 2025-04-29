@@ -1,0 +1,157 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: white;
+  }
+  
+  /* Navbar Styles */
+  .navbar {     
+    display: flex;
+    justify-content: space-between; /* Space between left and right elements */
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background: rgba(0, 0, 0, 0.0);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-left .brand-name {
+    color: white;
+    font-size: 1.5rem; /* Adjust size as needed */
+    font-weight: bold;
+    text-transform: uppercase; /* Optional: Make the text uppercase */
+    text-decoration: none; /* Removes underline */
+    padding-right: 0px;
+    margin-top: 15px;
+    white-space: nowrap;
+  }
+  
+  .navbar .nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%;
+  }
+  
+  .navbar .nav-links li {
+    margin: 0 35px; /* Reduced space between items */
+    margin-top: 15px;
+  }
+  
+  .navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .navbar-left a:hover {
+    color: #ff1493;
+  }
+  .navbar .nav-links li a:hover {
+    color: #ff1493;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 21px;
+    justify-content: space-between;
+  }
+  
+  .hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+  }
+ 
+  .projectpage{
+    background: linear-gradient(rgb(9, 15, 19),rgb(44, 3, 44), rgb(0, 0, 0)) ;
+  }
+
+
+
+
+
+
+
+  /* Responsive Styles for 768px (Tablets) */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      width: 100%;
+      padding-left: 16px;
+    }
+  
+    .navbar .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: fixed;
+      top: 60px;
+      left: 20px;
+      background-color: rgba(0, 0, 0, 0.9);
+      width: 20%;
+      border-radius: 5px;
+    }
+  
+    .navbar .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .hamburger {
+      display: flex;
+      margin-right: 700px;
+    }
+  
+    
+  
+    .navbar.active .nav-links {
+      display: flex;
+    }
+}
+
+/* Responsive Styles for 480px (Mobile Phones) */
+@media (max-width: 480px) {
+    .navbar {
+      padding: 1rem;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hamburger {
+      display: flex;
+      margin-right: 400px;
+    }
+  
+  
+    .navbar .nav-links {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 100px;
+      right: 0;
+    }
+}
+  
