@@ -4,7 +4,7 @@ Welcome to my personal portfolio website! This project showcases my skills, proj
 
 ## 🌐 Live Preview
 
-Check it out live: [https://shreya2004khanna.github.io/PORTFOLIO](https://shreyakhannaportfolio.netlify.app/)
+Check it out live: [https://shreyakhannaportfolio.netlify.app/](https://shreyakhannaportfolio.netlify.app/)
 
 
 ## 🚀 Features
