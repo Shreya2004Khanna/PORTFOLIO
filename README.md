@@ -20,6 +20,7 @@ Check it out live: [https://shreyakhannaportfolio.netlify.app/](https://shreyakh
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
+- Firebase (for storing messages )
 - Git & GitHub for version control and deployment
 
 
