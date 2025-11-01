@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Global Styles */
 * {
   margin: 0;
@@ -329,28 +333,34 @@ body {
   overflow: hidden;
 }
 
+/* Shine Layer */
+.about-buttons button::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  transform: translateX(-100%) rotate(25deg);
+  transition: 1s ease;
+}
+
+.about-buttons button:hover::after {
+  transform: translateX(100%) rotate(25deg);
+}
+
 .about-buttons button:hover {
   background-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-  animation: pop 2s infinite alternate;
   transform: translateY(-5px);
 }
 
-.about-buttons button::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  z-index: -1;
-  transform: scale(0);
-  transition: all 0.1s ease;
-  border-radius: 25px;
-}
-
-.about-buttons button:hover::before {
-  transform: scale(2);
-}
 
 .about-text {
   flex: 1;
@@ -543,13 +553,10 @@ body {
 }
 
 
-
 #skills {
   padding: 50px 0;
-  background: linear-gradient(rgb(9, 15, 19),rgb(44, 3, 44), rgb(0, 0, 0)) ;
-  
+  background: linear-gradient(rgb(9, 15, 19),rgb(44, 3, 44), rgb(0, 0, 0));
 }
-
 
 .skill {
   opacity: 0;
@@ -562,22 +569,20 @@ body {
   transform: translateY(0);
 }
 
-
-#skills h2{
- font-size: 46px;
- text-align: center;
- padding-bottom: 25px;
- 
+#skills h2 {
+  font-size: 46px;
+  text-align: center;
+  padding-bottom: 25px;
 }
+
 .skills-gallery {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   perspective: 1000px;
   margin-top: 50px;
-  
-  
 }
+
 .skill {
   margin: 20px;
   width: 120px;
@@ -589,35 +594,40 @@ body {
   animation: fadeIn 1s ease;
   transition: transform 0.5s ease, opacity 0.5s ease;
   transform-style: preserve-3d;
-  
 }
+
+.skill i, .skill span {
+  transition: all 0.35s ease;
+}
+
 .skill i {
   font-size: 50px;
   color: white;
   text-shadow: 0 0 5px rgb(255, 255, 255);
-  
 }
+
 .skill span {
   margin-top: 10px;
   font-size: 16px;
-  text-shadow: 0 0 10px rgb(255, 255, 255,1);
+  text-shadow: 0 0 10px rgba(255,255,255,0.7);
 }
+
 .skill:hover {
   opacity: 1;
-  transform: scale(1.4);
+  transform: scale(1.25);
 }
 
-/* Only Icon tilts */
+/* Tilt only icon */
 .skill:hover i {
-  transform: rotateZ(-8deg);
-  transition: transform 0.4s ease;
+  transform: rotateZ(-8deg) scale(1.15);
 }
 
-/* Keep text normal */
+/* Soft color glow on text only */
 .skill:hover span {
   color: rgb(197, 126, 228);
-  text-shadow: 0 0 10px rgba(255,255,255,1);
+  text-shadow: 0 0 12px rgba(197, 126, 228, 1);
 }
+
 
 
 
@@ -1288,3 +1298,4 @@ body {
     padding: 0;
   }
 }
+
