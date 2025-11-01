@@ -604,10 +604,22 @@ body {
 }
 .skill:hover {
   opacity: 1;
-  transform: scale(1.5);
-  color: #71d3f4;
-  text-shadow: 0 0 20px #25c5f1;
+  transform: scale(1.4);
 }
+
+/* Only Icon tilts */
+.skill:hover i {
+  transform: rotateZ(-8deg);
+  transition: transform 0.4s ease;
+}
+
+/* Keep text normal */
+.skill:hover span {
+  color: rgb(197, 126, 228);
+  text-shadow: 0 0 10px rgba(255,255,255,1);
+}
+
+
 
 
 /* Responsive Styles for 768px (Tablets) */
